@@ -32,4 +32,9 @@
         android:name="com.example.skybank3.EstadoCuenta"
         android:label="fragment_estado_cuenta"
         tools:layout="@layout/fragment_estado_cuenta" />
+    <fragment
+        android:id="@+id/citasRecibidas"
+        android:name="com.example.skybank3.CitasRecibidas"
+        android:label="fragment_citas_recibidas"
+        tools:layout="@layout/fragment_citas_recibidas" />
 </navigation>
