@@ -1,4 +1,4 @@
-package com.example.skybank3.ui.gallery
+package com.example.skybank3.ui.slideshow.gallery
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

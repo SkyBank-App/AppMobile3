@@ -1,4 +1,4 @@
-package com.example.skybank3.ui.gallery
+package com.example.skybank3.ui.slideshow.gallery
 
 import android.os.Bundle
 import android.view.LayoutInflater

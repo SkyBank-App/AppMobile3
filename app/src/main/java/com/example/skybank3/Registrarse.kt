@@ -24,7 +24,7 @@ lateinit var txMailR: EditText
 lateinit var txTelefonoR: EditText
 lateinit var txPINR: EditText
 lateinit var btnregsR: Button
-lateinit var btnBACK:Button
+
 
 var dia: Int = 0
 var mes: Int = 0
@@ -52,7 +52,7 @@ class Registrarse : AppCompatActivity(), View.OnClickListener {
         txTelefonoR = findViewById(R.id.edtTelefonoR)
         txTelefonoR.setText("+503 ")
         btnregsR = findViewById(R.id.btnRegistrarseR)
-        btnBACK =findViewById(R.id.btnBack)
+
 
 
 
@@ -78,11 +78,7 @@ class Registrarse : AppCompatActivity(), View.OnClickListener {
                 startActivity(open)
 
             }
-            btnBACK.setOnClickListener{
-                val open: Intent = Intent(this, Login::class.java)
-                startActivity(open)
 
-            }
 
         }
 
