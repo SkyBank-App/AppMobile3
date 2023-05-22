@@ -8,33 +8,33 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.skybank3.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label=" "
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/idAgendarCitas"
         android:name="com.example.skybank3.ui.slideshow.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label=" "
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/idTransferencias"
         android:name="com.example.skybank3.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label=" "
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/menuCajero"
         android:name="com.example.skybank3.MenuCajero"
-        android:label="fragment_menu_cajero"
+        android:label=" "
         tools:layout="@layout/fragment_menu_cajero" />
     <fragment
         android:id="@+id/estadoCuenta"
         android:name="com.example.skybank3.EstadoCuenta"
-        android:label="fragment_estado_cuenta"
+        android:label=" "
         tools:layout="@layout/fragment_estado_cuenta" />
     <fragment
         android:id="@+id/citasRecibidas"
         android:name="com.example.skybank3.CitasRecibidas"
-        android:label="fragment_citas_recibidas"
+        android:label=" "
         tools:layout="@layout/fragment_citas_recibidas" />
 </navigation>
