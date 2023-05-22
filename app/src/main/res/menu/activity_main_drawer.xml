@@ -28,5 +28,9 @@
             android:id="@+id/idCitasSolucitadas"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Citas Solicitadas" />
+        <item
+            android:id="@+id/idHistorialTransacciones"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Historial"/>
     </group>
 </menu>

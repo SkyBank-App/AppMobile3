@@ -42,4 +42,9 @@
         android:name="com.example.skybank3.CitasSolucitadas"
         android:label=" "
         tools:layout="@layout/fragment_citas_solucitadas" />
+    <fragment
+        android:id="@+id/idHistorialTransacciones"
+        android:name="com.example.skybank3.historial"
+        android:label=" "
+        tools:layout="@layout/fragment_historial" />
 </navigation>
