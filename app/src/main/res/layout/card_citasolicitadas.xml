@@ -31,26 +31,30 @@
                 android:layout_marginLeft="4dp"
 
                 >
+
                 <TextView
+                    android:id="@+id/textViewNombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
-                    android:textColor="@color/black"
-                    android:text="Nombre:">
-                </TextView>
+                    android:text="Nombre:"
+                    android:textColor="@color/black"></TextView>
+
                 <TextView
+                    android:id="@+id/textViewDui"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="DUI:">
+                    android:text="DUI:"
+                    android:textColor="@color/black">
 
                 </TextView>
+
                 <TextView
+                    android:id="@+id/textViewAsunto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Motivo:">
-                </TextView>
+                    android:text="Motivo:"
+                    android:textColor="@color/black"></TextView>
 
                 <TextView
                     android:layout_width="match_parent"

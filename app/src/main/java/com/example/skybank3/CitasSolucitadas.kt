@@ -1,59 +1,102 @@
 package com.example.skybank3
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CitasSolucitadas.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CitasSolucitadas : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var databaseReference: DatabaseReference
+    private lateinit var adapter: CitasAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    data class Cita(
+        val id: String = "",
+        val nombre: String = "",
+        val dui: String = "",
+        val asunto: String = ""
+    )
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val root = inflater.inflate(R.layout.fragment_citas_solucitadas, container, false)
+        val recyclerView: RecyclerView = root.findViewById(R.id.RecyclerCita)
+        adapter = CitasAdapter()
+
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = adapter
+
+        databaseReference = FirebaseDatabase.getInstance().reference.child("Citas")
+        fetchCitasFromFirebase()
+
+        return root
+    }
+
+    private fun fetchCitasFromFirebase() {
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val citasList = mutableListOf<Cita>()
+
+                for (citaSnapshot in snapshot.children) {
+                    val cita = citaSnapshot.getValue(Cita::class.java)
+                    cita?.let {
+                        citasList.add(it)
+                    }
+                }
+
+                adapter.submitList(citasList)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Handle the error case
+            }
+        })
+    }
+
+    inner class CitasAdapter : RecyclerView.Adapter<CitasAdapter.CitasViewHolder>() {
+        private var citasList: List<Cita> = emptyList()
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CitasViewHolder {
+            val itemView = LayoutInflater.from(parent.context)
+                .inflate(R.layout.card_citasolicitadas, parent, false)
+            return CitasViewHolder(itemView)
+        }
+
+        override fun onBindViewHolder(holder: CitasViewHolder, position: Int) {
+            val cita = citasList[position]
+            holder.bind(cita)
+        }
+
+        override fun getItemCount(): Int {
+            return citasList.size
+        }
+
+        fun submitList(list: List<Cita>) {
+            citasList = list
+            notifyDataSetChanged()
+        }
+
+        inner class CitasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+            private val nombreTextView: TextView = itemView.findViewById(R.id.textViewNombre)
+            private val duiTextView: TextView = itemView.findViewById(R.id.textViewDui)
+            private val asuntoTextView: TextView = itemView.findViewById(R.id.textViewAsunto)
+
+            fun bind(cita: Cita) {
+                nombreTextView.text = cita.nombre
+                duiTextView.text = cita.dui
+                asuntoTextView.text = cita.asunto
+            }
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_citas_solucitadas, container, false)
-    }
-
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CitasSolucitadas.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CitasSolucitadas().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        fun newInstance() = CitasSolucitadas()
     }
 }
