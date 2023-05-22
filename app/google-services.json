@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "589029710995",
+    "firebase_url": "https://skybank-c36d2-default-rtdb.firebaseio.com",
+    "project_id": "skybank-c36d2",
+    "storage_bucket": "skybank-c36d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589029710995:android:7795ddf09d1988ec164166",
+        "android_client_info": {
+          "package_name": "com.example.skybank3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589029710995-ktfideheimco89cpfdaspljvgk0p1248.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTiBxwH6fg0BKy5w1TEmR7-ItL90y83rY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589029710995-ktfideheimco89cpfdaspljvgk0p1248.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589029710995:android:97a665864e484073164166",
+        "android_client_info": {
+          "package_name": "com.example.skybanktest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589029710995-ktfideheimco89cpfdaspljvgk0p1248.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTiBxwH6fg0BKy5w1TEmR7-ItL90y83rY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589029710995-ktfideheimco89cpfdaspljvgk0p1248.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
