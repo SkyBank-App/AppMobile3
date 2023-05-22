@@ -1,5 +1,6 @@
 package com.example.skybank3
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.content.pm.ActivityInfo
@@ -7,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.DatabaseReference
@@ -22,6 +24,7 @@ lateinit var txMailR: EditText
 lateinit var txTelefonoR: EditText
 lateinit var txPINR: EditText
 lateinit var btnregsR: Button
+lateinit var btnBACK:Button
 
 var dia: Int = 0
 var mes: Int = 0
@@ -31,6 +34,10 @@ private lateinit var firebaseDatabase: FirebaseDatabase
 private lateinit var databaseReference: DatabaseReference
 
 class Registrarse : AppCompatActivity(), View.OnClickListener {
+
+
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrarse)
@@ -45,6 +52,12 @@ class Registrarse : AppCompatActivity(), View.OnClickListener {
         txTelefonoR = findViewById(R.id.edtTelefonoR)
         txTelefonoR.setText("+503 ")
         btnregsR = findViewById(R.id.btnRegistrarseR)
+        btnBACK =findViewById(R.id.btnBack)
+
+
+
+
+
         btnregsR.setOnClickListener {
             if (txNombreR.text.isEmpty()) {
                 txNombreR.error = "Ingrese su nombre completo"
@@ -63,8 +76,14 @@ class Registrarse : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show()
                 val open: Intent = Intent(this, Login::class.java)
                 startActivity(open)
-                return@setOnClickListener
+
             }
+            btnBACK.setOnClickListener{
+                val open: Intent = Intent(this, Login::class.java)
+                startActivity(open)
+
+            }
+
         }
 
         inicializarFirebase()

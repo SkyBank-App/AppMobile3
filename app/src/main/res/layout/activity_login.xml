@@ -78,7 +78,6 @@
         android:id="@+id/btnRegistrarseL"
         android:layout_width="187dp"
         android:layout_height="51dp"
-        android:background="@drawable/ic_launcher_background"
         android:backgroundTint="@color/DarkBlue"
         android:text="@string/Registrarse"
         android:textAllCaps="false"
