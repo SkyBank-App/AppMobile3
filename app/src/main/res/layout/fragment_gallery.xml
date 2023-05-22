@@ -2,29 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idAgendCitas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/DarkBlue"
     android:backgroundTint="@color/DarkBlue"
-    tools:context=".ui.home.gallery">
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="36dp"
-        android:layout_height="43dp"
-        android:backgroundTint="@color/DarkBlue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04"
-        app:srcCompat="@drawable/ep_back" />
+    tools:context=".ui.gallery.GalleryFragment">
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="310dp"
-        android:layout_height="203dp"
+        android:layout_width="306dp"
+        android:layout_height="178dp"
         android:layout_marginTop="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
