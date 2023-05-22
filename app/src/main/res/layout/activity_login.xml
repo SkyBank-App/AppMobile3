@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background"
+    android:backgroundTint="@color/DarkBlue"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/LogoL"
+        android:layout_width="381dp"
+        android:layout_height="252dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/skybanklogo"
+        app:layout_constraintBottom_toTopOf="@+id/edtDuiL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <EditText
+        android:id="@+id/edtDuiL"
+        android:layout_width="363dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/txt_blanco"
+        android:drawableStart="@drawable/dui"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="DUI"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint"
+        app:layout_constraintBottom_toTopOf="@+id/edtPinL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogoL"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <EditText
+        android:id="@+id/edtPinL"
+        android:layout_width="363dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/txt_blanco"
+        android:drawableStart="@drawable/cerrar"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="PIN de Seguridad"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDuiL" />
+
+    <Button
+        android:id="@+id/btnloginL"
+        android:layout_width="338dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/btn_orange"
+        android:text="INICIAR SESION"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPinL" />
+
+    <Button
+        android:id="@+id/btnRegistrarseL"
+        android:layout_width="187dp"
+        android:layout_height="51dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="@color/DarkBlue"
+        android:text="@string/Registrarse"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnloginL"
+        app:layout_constraintVertical_bias="0.422" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

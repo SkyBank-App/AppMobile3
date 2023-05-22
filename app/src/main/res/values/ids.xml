@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nav_host_fragment_content_login" type="id" />
+    <item name="edtNombreR" type="id" />
+    <item name="edtFechaNacimientoR" type="id" />
+    <item name="edtDUIR" type="id" />
+    <item name="edtMailR" type="id" />
+    <item name="edtTelefonoR" type="id" />
+    <item name="edtPINR" type="id" />
+    <item name="btnRegistrarseR" type="id" />
+</resources>
