@@ -38,8 +38,8 @@
         android:label=" "
         tools:layout="@layout/fragment_citas_recibidas" />
     <fragment
-        android:id="@+id/citasSolucitadas"
+        android:id="@+id/idCitasSolucitadas"
         android:name="com.example.skybank3.CitasSolucitadas"
-        android:label="fragment_citas_solucitadas"
+        android:label=" "
         tools:layout="@layout/fragment_citas_solucitadas" />
 </navigation>
