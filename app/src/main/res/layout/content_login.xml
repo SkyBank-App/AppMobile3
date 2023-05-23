@@ -9,22 +9,21 @@
     tools:context=".Login">
 
     <ImageView
-        android:id="@+id/LogoL"
-        android:layout_width="381dp"
-        android:layout_height="252dp"
-        android:scaleType="fitXY"
+        android:id="@+id/imageView14"
+        android:layout_width="370dp"
+        android:layout_height="162dp"
         android:src="@drawable/skybanklogo"
-        app:layout_constraintBottom_toTopOf="@+id/edtDuiL"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <EditText
         android:id="@+id/edtDuiL"
         android:layout_width="363dp"
         android:layout_height="65dp"
-        android:layout_marginTop="24dp"
         android:background="@drawable/txt_blanco"
         android:drawableStart="@drawable/dui"
         android:drawablePadding="10dp"
@@ -35,17 +34,16 @@
         android:paddingStart="15dp"
         android:textColor="@color/black"
         android:textColorHint="@color/hint"
-        app:layout_constraintBottom_toTopOf="@+id/edtPinL"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LogoL"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42" />
 
     <EditText
         android:id="@+id/edtPinL"
         android:layout_width="363dp"
         android:layout_height="65dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/txt_blanco"
         android:drawableStart="@drawable/cerrar"
         android:drawablePadding="10dp"
@@ -56,38 +54,44 @@
         android:paddingStart="15dp"
         android:textColor="@color/black"
         android:textColorHint="@color/hint"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtDuiL" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
 
     <Button
         android:id="@+id/btnloginL"
         android:layout_width="338dp"
         android:layout_height="61dp"
-        android:layout_marginTop="76dp"
         android:background="@drawable/btn_orange"
         android:text="INICIAR SESION"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPinL" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
 
     <Button
         android:id="@+id/btnRegistrarseL"
-    android:layout_width="187dp"
-    android:layout_height="51dp"
-    android:background="@drawable/ic_launcher_background"
-    android:backgroundTint="@color/DarkBlue"
-    android:text="@string/Registrarse"
-    android:textAllCaps="false"
-    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-    android:textSize="18sp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/btnloginL"
-    app:layout_constraintVertical_bias="0.422" />
+        android:layout_width="187dp"
+        android:layout_height="51dp"
+        android:background="#191F53"
+        android:backgroundTint="#040A3C"
+        android:text="@string/Registrarse"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.933" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
